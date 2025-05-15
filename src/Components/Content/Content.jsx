@@ -12,9 +12,11 @@ export default function Content() {
     const handleClick = (e) => {
         const monClick = e.target.id;
         choixAleatoire = choixRandom[Math.floor(Math.random() * choixRandom.length)];
-
         setMonChoix =(monClick)
         setChoixOrdi(choixAleatoire)
+
+        {monClick == 'paper' && setChoixOrdi =='rock' ? "Bg" : none }
+        
         
     };
 
