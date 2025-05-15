@@ -3,6 +3,7 @@ import './App.css'
 import Header from './Components/Header/Header'
 import Content from './Components/Content/Content'
 import Bagarre from './Components/Bagarre/Bagarre'
+import Rules from './Components/Rules/Rules'
 
 function App() {
   const [point, setPoint] = useState(0)
@@ -42,6 +43,7 @@ function App() {
       <Header point={point}/>
       {showContent && <Content onMakeChoice={handleGameChoice}/>}
       {showBagarre && <Bagarre handleRestart={handleRestart} point={point} monChoix={monChoix} choixOrdi={choixOrdi}/>}
+      <Rules/>
     </>
   )
 }

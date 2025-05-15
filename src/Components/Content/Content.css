@@ -70,3 +70,12 @@
     width: 128px;
 }
 
+@media (max-width:540px){
+
+    #paper,#rock,#scissor{
+        height: 70px;
+        width: 70 ;
+    }
+
+
+}
