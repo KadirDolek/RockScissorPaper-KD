@@ -4,37 +4,33 @@ import Header from './Components/Header/Header'
 import Content from './Components/Content/Content'
 import Bagarre from './Components/Bagarre/Bagarre'
 
-
-
 function App() {
-
   const [point, setPoint] = useState(0)
   const [showBagarre, setShowBagarre] = useState(false)
   const [showContent, setShowContent] = useState(true)
-  const [monChoix,setMonChoix] = useState('')
-  const [choixOrdi,setChoixOrdi]= useState('')
+  const [monChoix, setMonChoix] = useState('')
+  const [choixOrdi, setChoixOrdi] = useState('')
 
-    const handleGameChoice = (playerChoice, computerChoice) => {
-      setMonChoix(playerChoice)
-      setChoixOrdi(computerChoice)
-      setShowBagarre(true)
-      setShowContent(false) // Ajout de cette ligne pour cacher Content
+  const handleGameChoice = (playerChoice, computerChoice) => {
+    setMonChoix(playerChoice)
+    setChoixOrdi(computerChoice)
+    setShowBagarre(true)
+    setShowContent(false)
 
-      if (
-        (playerChoice === 'scissor' && computerChoice === 'paper') ||
-        (playerChoice === 'rock' && computerChoice === 'scissor') ||
-        (playerChoice === 'paper' && computerChoice === 'rock')
-      ) {
-        setPoint(prevPoint => prevPoint + 1)
-      } else if (
-        (playerChoice === 'scissor' && computerChoice === 'rock') ||
-        (playerChoice === 'rock' && computerChoice === 'paper') ||
-        (playerChoice === 'paper' && computerChoice === 'scissor')
-      ) {
-        setPoint(prevPoint => prevPoint - 1)
-      }
-      // Le cas d'égalité est implicite (pas besoin de changer le score)
+    if (
+      (playerChoice.props.id === 'scissor' && computerChoice.props.id === 'paper') ||
+      (playerChoice.props.id === 'rock' && computerChoice.props.id === 'scissor') ||
+      (playerChoice.props.id === 'paper' && computerChoice.props.id === 'rock')
+    ) {
+      setPoint(prevPoint => prevPoint + 1)
+    } else if (
+      (playerChoice.props.id === 'scissor' && computerChoice.props.id === 'rock') ||
+      (playerChoice.props.id === 'rock' && computerChoice.props.id === 'paper') ||
+      (playerChoice.props.id === 'paper' && computerChoice.props.id === 'scissor')
+    ) {
+      setPoint(prevPoint => prevPoint - 1)
     }
+  }
 
   const handleRestart = () => {
     setShowBagarre(prev=> !prev)
@@ -44,17 +40,8 @@ function App() {
   return (
     <>
       <Header point={point}/>
-      {showContent && 
-        <Content onMakeChoice={handleGameChoice}/>
-      }
-      {showBagarre &&
-        <Bagarre 
-          handleRestart={handleRestart}
-          point={point}
-          monChoix={monChoix}
-          choixOrdi={choixOrdi}
-        />
-      }
+      {showContent && <Content onMakeChoice={handleGameChoice}/>}
+      {showBagarre && <Bagarre handleRestart={handleRestart} point={point} monChoix={monChoix} choixOrdi={choixOrdi}/>}
     </>
   )
 }

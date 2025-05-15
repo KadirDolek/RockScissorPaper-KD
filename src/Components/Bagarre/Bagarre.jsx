@@ -1,40 +1,44 @@
 import './Bagarre.css'
-import Header from '../Header/Header'
 
-export default function Bagarre({ point, monChoix, choixOrdi, handleRestart }){
+export default function Bagarre({monChoix, choixOrdi, handleRestart }){
     
-    // Ajout de la logique pour déterminer le résultat
     let resultat = "";
+    // Compare les IDs des éléments reçus
     if (
-        (monChoix === 'scissor' && choixOrdi === 'paper') ||
-        (monChoix === 'rock' && choixOrdi === 'scissor') ||
-        (monChoix === 'paper' && choixOrdi === 'rock')
+        (monChoix.props.id === 'scissor' && choixOrdi.props.id === 'paper') ||
+        (monChoix.props.id === 'rock' && choixOrdi.props.id === 'scissor') ||
+        (monChoix.props.id === 'paper' && choixOrdi.props.id === 'rock')
     ) {
         resultat = "YOU WIN!";
     } else if (
-        (monChoix === 'scissor' && choixOrdi === 'rock') ||
-        (monChoix === 'rock' && choixOrdi === 'paper') ||
-        (monChoix === 'paper' && choixOrdi === 'scissor')
+        (monChoix.props.id === 'scissor' && choixOrdi.props.id === 'rock') ||
+        (monChoix.props.id === 'rock' && choixOrdi.props.id === 'paper') ||
+        (monChoix.props.id === 'paper' && choixOrdi.props.id === 'scissor')
     ) {
         resultat = "YOU LOSE!";
     } else {
         resultat = "DRAW!";
     }
 
+    // Pour débugger
+    console.log('monChoix:', monChoix.props.id);
+    console.log('choixOrdi:', choixOrdi.props.id);
+
     return(
         <>
             <div style={{display:'flex', justifyContent:'space-evenly', marginTop:'7.5%'}}>
                 <div>
                     <p>Tu as choisi</p>
-                    <p>{monChoix}</p>
+                    {/* Affiche directement l'élément image reçu */}
+                    <div style={{textAlign:'center'}}>{monChoix}</div>
                 </div>
                 <div style={{marginTop:'10%'}}> 
                     <p id='phrase'>{resultat}</p>
-                    <button onClick={() => handleRestart()} id='restart'>PLAY AGAIN</button>
+                    <button onClick={handleRestart} id='restart'>PLAY AGAIN</button>
                 </div>
                 <div>
-                    <p>Ton adversaire a choisi </p>
-                    <p>{choixOrdi}</p>
+                    <p>L'ordi a choisi </p>
+                    <div style={{textAlign:'center'}}>{choixOrdi}</div>
                 </div>
             </div>
         </>

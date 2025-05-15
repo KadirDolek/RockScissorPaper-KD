@@ -1,21 +1,17 @@
-import React,{ useState } from 'react';
+import React from 'react';
 import './Content.css'
 
-
 export default function Content({onMakeChoice}) {
-    
-    const choixRandom =['paper', 'rock','scissor']
-    const [monChoix, setMonChoix] = useState('');
-    const [choixOrdi, setChoixOrdi] = useState('');
-
+    const paper = <img style={{ cursor: 'pointer' }} id='paper' src="../src/assets/images/icon-paper.svg" alt="papier"/>
+    const rock = <img style={{ cursor: 'pointer' }} id='rock' src="../src/assets/images/icon-rock.svg" alt="pierre"/>
+    const scissor = <img style={{ cursor: 'pointer' }} id='scissor' src="../src/assets/images/icon-scissors.svg" alt="ciseaux"/>
+    const choixRandom = [paper, rock, scissor]
 
     const handleClick = (e) => {
-        const monClick = e.target.id;
+        const elementId = e.target.id;
+        const elementClique = choixRandom.find(choix => choix.props.id === elementId);
         const choixAleatoire = choixRandom[Math.floor(Math.random() * choixRandom.length)];
-        setMonChoix(monClick);
-        setChoixOrdi(choixAleatoire);
-        // Appelle la fonction onMakeChoice avec les deux paramètres
-        onMakeChoice(monClick, choixAleatoire);
+        onMakeChoice(elementClique, choixAleatoire);
     };
 
     return (
