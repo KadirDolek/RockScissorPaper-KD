@@ -1,0 +1,71 @@
+#content1{
+    display: flex;
+    height: 600px;
+    width: 700px;
+    justify-self: center;
+    margin-top: 2.5%;
+    background-image: url(../../assets/images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#paper{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    border: 15px solid rgb(69, 96, 224);
+    border-radius: 50%;
+    overflow: visible;
+    padding: 15px;
+    padding-left: 22px;
+    padding-right: 22px;
+    background-color: white;
+}
+
+#divPaper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 128px;
+}
+#scissor{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    border: 15px solid rgb(234, 161, 34);
+    border-radius: 50%;
+    overflow: visible;
+    padding: 15px;
+    padding-left: 22px;
+    padding-right: 22px;
+    background-color: white;
+}
+
+#divRock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 128px;
+}
+#rock{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    border: 15px solid rgb(220, 50, 83);
+    border-radius: 50%;
+    overflow: visible;
+    padding: 17px;
+    padding-left: 22px;
+    padding-right: 22px;
+    background-color: white;
+}
+
+#divScissor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 128px;
+}
