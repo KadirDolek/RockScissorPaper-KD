@@ -9,7 +9,9 @@ export default function Content({onMakeChoice}) {
 
     const handleClick = (e) => {
         const elementId = e.target.id;
+        // -----------------------------------  Compliqué ici --------------------------
         const elementClique = choixRandom.find(choix => choix.props.id === elementId);
+        // -----------------------------------------------------------------------------
         const choixAleatoire = choixRandom[Math.floor(Math.random() * choixRandom.length)];
         onMakeChoice(elementClique, choixAleatoire);
     };
