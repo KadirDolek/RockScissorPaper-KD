@@ -2,7 +2,7 @@ import React,{ useState } from 'react';
 import './Content.css'
 
 
-export default function Content() {
+export default function Content({onMakeChoice}) {
     
     const choixRandom =['paper', 'rock','scissor']
     const [monChoix, setMonChoix] = useState('');
@@ -11,13 +11,11 @@ export default function Content() {
 
     const handleClick = (e) => {
         const monClick = e.target.id;
-        choixAleatoire = choixRandom[Math.floor(Math.random() * choixRandom.length)];
-        setMonChoix =(monClick)
-        setChoixOrdi(choixAleatoire)
-
-        {monClick == 'paper' && setChoixOrdi =='rock' ? "Bg" : none }
-        
-        
+        const choixAleatoire = choixRandom[Math.floor(Math.random() * choixRandom.length)];
+        setMonChoix(monClick);
+        setChoixOrdi(choixAleatoire);
+        // Appelle la fonction onMakeChoice avec les deux paramètres
+        onMakeChoice(monClick, choixAleatoire);
     };
 
     return (

@@ -42,3 +42,33 @@
     color: rgb(74, 71, 89);
     font-weight: bold;
 }
+
+
+
+
+@media (max-width:840px){
+
+    #header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 160px;
+        width: 400px;
+        justify-self: center;
+        border: solid 1px grey;
+        border-radius: 15px;
+        padding-left: 35px;
+        padding-right: 35px;
+        margin-top: 2.5%;
+}
+
+    #header span{
+        font-size: 35px;
+        color: rgb(74, 71, 89);
+        font-weight: bold;
+}
+#header2 p {
+    font-size: 25px;
+}
+
+}
