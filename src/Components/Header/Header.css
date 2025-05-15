@@ -2,19 +2,43 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 250px;
+    height: 160px;
     width: 750px;
     justify-self: center;
+    border: solid 1px grey;
+    border-radius: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-top: 2.5%;
 }
 #header2{
-    text-align: center;
+    line-height: 0px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 600;
+}
+#header2 p {
+    font-size: 35px;
 }
 
 #header3{
     background-color: rgb(246, 246, 246);
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    color: rgb(153, 154, 176);
+    flex-direction: column;
+    line-height: 20px;
 }
 #header3 p{
-    
+    font-weight: bold;
+    font-size: 15px;
+    margin-top:-10px;
+}
+#header span{
+    font-size: 65px;
+    color: rgb(74, 71, 89);
+    font-weight: bold;
 }

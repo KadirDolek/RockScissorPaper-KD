@@ -13,6 +13,7 @@ export default function Header(){
             </div>
             <div id='header3'>
                 <p>SCORE</p>
+                <span>12</span>
             </div>
         </div>
     )
