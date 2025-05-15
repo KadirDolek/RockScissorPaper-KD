@@ -1,6 +1,6 @@
 import './Header.css'
 
-export default function Header(){
+export default function Header({point}){
 
     
 
@@ -13,7 +13,7 @@ export default function Header(){
             </div>
             <div id='header3'>
                 <p>SCORE</p>
-                <span>12</span>
+                <span>{point}</span>
             </div>
         </div>
     )
