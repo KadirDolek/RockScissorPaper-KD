@@ -1,0 +1,20 @@
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 250px;
+    width: 750px;
+    justify-self: center;
+}
+#header2{
+    text-align: center;
+}
+
+#header3{
+    background-color: rgb(246, 246, 246);
+    width: 100px;
+    height: 100px;
+}
+#header3 p{
+    
+}
