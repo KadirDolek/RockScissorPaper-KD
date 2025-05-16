@@ -30,4 +30,23 @@ body{
    justify-self: end;
 }
 
+@media (max-width:710px){
+
+  body{
+    margin-left: 10%;
+  }
+}
+@media (max-width:420px){
+
+  body{
+    margin-left: 85%;
+  }
+  #titrerules1{
+    display: flex;
+    justify-self: start;
+    transform: translateX(200px);
+  }
+
+}
+
 
