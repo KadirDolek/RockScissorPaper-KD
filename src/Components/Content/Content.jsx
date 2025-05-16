@@ -5,7 +5,7 @@ import Papier from '/src/assets/images/icon-paper.svg'
 import Ciseaux from '/src/assets/images/icon-scissors.svg'
 
 export default function Content({onMakeChoice}) {
-    const paper = <img style={{ cursor: 'pointer' }} id='paper' src={Papier}alt="papier"/>
+    const paper = <img style={{ cursor: 'pointer' }} id='paper' src={Papier}/>
     const rock = <img style={{ cursor: 'pointer' }} id='rock' src={Pierre} alt="pierre"/>
     const scissor = <img style={{ cursor: 'pointer' }} id='scissor' src={Ciseaux} alt="ciseaux"/>
     const choixRandom = [paper, rock, scissor]
@@ -26,7 +26,7 @@ export default function Content({onMakeChoice}) {
                     style={{ cursor: 'pointer' }}
                     onClick={handleClick}
                     id='paper'
-                    src="../src/assets/images/icon-paper.svg"
+                    src={Papier}
                     alt="papier"
                 />
             </div>
@@ -35,7 +35,7 @@ export default function Content({onMakeChoice}) {
                     style={{ cursor: 'pointer' }}
                     onClick={handleClick}
                     id='scissor'
-                    src="../src/assets/images/icon-scissors.svg"
+                    src={Ciseaux}
                     alt="ciseaux"
                 />
             </div>
@@ -44,7 +44,7 @@ export default function Content({onMakeChoice}) {
                     style={{ cursor: 'pointer' }}
                     onClick={handleClick}
                     id='rock'
-                    src="../src/assets/images/icon-rock.svg"
+                    src={Pierre}
                     alt="pierre"
                 />
             </div>

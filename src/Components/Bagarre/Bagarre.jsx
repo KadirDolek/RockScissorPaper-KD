@@ -29,7 +29,7 @@ export default function Bagarre({monChoix, choixOrdi, handleRestart }){
             <div style={{display:'flex', justifyContent:'space-evenly', marginTop:'7.5%'}}>
                 <div>
                     <p style={{textAlign:'center'}}>YOU PICKED</p>
-                    <div className={playerEffetClass} style={{textAlign:'center'}}>
+                    <div  style={{textAlign:'center'}}>
                         {monChoix}
                     </div>
                 </div>
@@ -39,7 +39,7 @@ export default function Bagarre({monChoix, choixOrdi, handleRestart }){
                 </div>
                 <div>
                     <p style={{textAlign:'center '}}>THE HOUSE PICKED</p>
-                    <div className={computerEffetClass} style={{textAlign:'center'}}>
+                    <div style={{textAlign:'center'}}>
                         {choixOrdi}
                     </div>
                 </div>
