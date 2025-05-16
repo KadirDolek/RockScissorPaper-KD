@@ -15,6 +15,7 @@
 body{
     background: radial-gradient(circle,rgba(22, 31, 64, 1) 65%, rgba(0, 0, 0, 1) 92%);
     color: white;
+    margin: 0;
 }
 
 #titrerules1{
@@ -39,12 +40,24 @@ body{
 @media (max-width:420px){
 
   body{
-    margin-left: 85%;
+    margin-left: 80%;
   }
   #titrerules1{
     display: flex;
     justify-self: start;
     transform: translateX(200px);
+  }
+
+}
+@media (min-width:421px) and (max-width:550px){
+
+  body{
+    margin-left: 45%;
+  }
+  #titrerules1{
+    display: flex;
+    justify-self: start;
+    transform: translateX(270px);
   }
 
 }
