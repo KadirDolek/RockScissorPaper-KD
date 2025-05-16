@@ -22,8 +22,6 @@ export default function Bagarre({monChoix, choixOrdi, handleRestart }){
         
     }
 
-    console.log('monChoix:', monChoix.props.id);
-    console.log('choixOrdi:', choixOrdi.props.id);
 
     return(
         <>

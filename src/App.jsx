@@ -3,7 +3,7 @@ import './App.css'
 import Header from './Components/Header/Header'
 import Content from './Components/Content/Content'
 import Bagarre from './Components/Bagarre/Bagarre'
-import Rules from './Components/Rules/Rules'
+import ShowRules from './Components/ShowRules/ShowRules'
 
 function App() {
   const [point, setPoint] = useState(0)
@@ -11,6 +11,7 @@ function App() {
   const [showContent, setShowContent] = useState(true)
   const [monChoix, setMonChoix] = useState('')
   const [choixOrdi, setChoixOrdi] = useState('')
+  const [showRules, setShowRules] = useState(false)
 
   const handleGameChoice = (playerChoice, computerChoice) => {
     setMonChoix(playerChoice)
@@ -32,18 +33,23 @@ function App() {
       setPoint(prevPoint => prevPoint - 1)
     }
   }
-
   const handleRestart = () => {
     setShowBagarre(prev=> !prev)
     setShowContent(open=> !open)
   }
+  const toggleRules = () => {
+    setShowRules(prev => !prev);
+  };
 
   return (
     <>
       <Header point={point}/>
       {showContent && <Content onMakeChoice={handleGameChoice}/>}
       {showBagarre && <Bagarre handleRestart={handleRestart} point={point} monChoix={monChoix} choixOrdi={choixOrdi}/>}
-      <Rules/>
+      <h4 id='titrerules1' onClick={toggleRules}>
+        RULES
+      </h4>
+      {showRules && <ShowRules onClose={toggleRules} />}
     </>
   )
 }
