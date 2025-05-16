@@ -1,10 +1,13 @@
 import React from 'react';
 import './Content.css'
+import Pierre from '/src/assets/images/icon-rock.svg'
+import Papier from '/src/assets/images/icon-paper.svg'
+import Ciseaux from '/src/assets/images/icon-scissors.svg'
 
 export default function Content({onMakeChoice}) {
-    const paper = <img style={{ cursor: 'pointer' }} id='paper' src="../src/assets/images/icon-paper.svg" alt="papier"/>
-    const rock = <img style={{ cursor: 'pointer' }} id='rock' src="../src/assets/images/icon-rock.svg" alt="pierre"/>
-    const scissor = <img style={{ cursor: 'pointer' }} id='scissor' src="../src/assets/images/icon-scissors.svg" alt="ciseaux"/>
+    const paper = <img style={{ cursor: 'pointer' }} id='paper' src={Papier}alt="papier"/>
+    const rock = <img style={{ cursor: 'pointer' }} id='rock' src={Pierre} alt="pierre"/>
+    const scissor = <img style={{ cursor: 'pointer' }} id='scissor' src={Ciseaux} alt="ciseaux"/>
     const choixRandom = [paper, rock, scissor]
 
     const handleClick = (e) => {

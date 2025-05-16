@@ -9,6 +9,7 @@ export default function Bagarre({monChoix, choixOrdi, handleRestart }){
         (monChoix.props.id === 'paper' && choixOrdi.props.id === 'rock')
     ) {
         resultat = "YOU WIN!";
+        // Je veux  FOUTRE LEFFET MOI 
         // monChoix.style.border= "19px solid #3b4262";
     } else if (
         (monChoix.props.id === 'scissor' && choixOrdi.props.id === 'rock') ||

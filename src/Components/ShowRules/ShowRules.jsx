@@ -1,4 +1,6 @@
 import './ShowRules.css'
+import Croix from '/src/assets/images/icon-close.svg'
+import Regles from '/src/assets/images/image-rules.svg'
 
 export default function ShowRules({ onClose }) {
     return (
@@ -9,12 +11,12 @@ export default function ShowRules({ onClose }) {
                     <img
                         onClick={onClose}
                         id='closebtn'
-                        src="../src/assets/images/icon-close.svg"
+                        src={Croix}
                         alt="close"
                     />
                 </div>
                 <div id='imgRules'>
-                    <img src="../src/assets/images/image-rules.svg" alt="rules" />
+                    <img src={Regles} alt="rules" />
                 </div>
             </div>
         </div>
