@@ -23,6 +23,10 @@
     cursor: pointer;
 }
 
+@media (max-width:420px){
+#oui{
+    font-size: 10px;
+}}
 
 /* .loser::after {
     content: "";

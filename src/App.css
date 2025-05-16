@@ -38,28 +38,33 @@ body{
   }
 }
 @media (max-width:420px){
-
-  body{
-    margin-left: 80%;
-  }
+  
   #titrerules1{
     display: flex;
     justify-self: start;
-    transform: translateX(200px);
+    transform: translateX(220px) translateY(100px);
   }
 
 }
 @media (min-width:421px) and (max-width:550px){
 
   body{
-    margin-left: 45%;
+    margin-left: 0%;
   }
   #titrerules1{
     display: flex;
     justify-self: start;
-    transform: translateX(270px);
+    transform: translateX(200px) translateY(100px);
   }
 
+}
+
+
+@media (min-width:551px) and (max-width:850px){
+
+  #titrerules1{
+    transform: translateX(10px) translateY(170px);
+  }
 }
 
 

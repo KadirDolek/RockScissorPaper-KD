@@ -28,7 +28,7 @@ export default function Bagarre({monChoix, choixOrdi, handleRestart }){
         <>
             <div style={{display:'flex', justifyContent:'space-evenly', marginTop:'7.5%'}}>
                 <div>
-                    <p style={{textAlign:'center'}}>YOU PICKED</p>
+                    <p id='oui' style={{textAlign:'center'}}>YOU PICKED</p>
                     <div  style={{textAlign:'center'}}>
                         {monChoix}
                     </div>
@@ -38,7 +38,7 @@ export default function Bagarre({monChoix, choixOrdi, handleRestart }){
                     <button onClick={handleRestart} id='restart'>PLAY AGAIN</button>
                 </div>
                 <div>
-                    <p style={{textAlign:'center '}}>THE HOUSE PICKED</p>
+                    <p id='oui' style={{textAlign:'center '}}>THE HOUSE PICKED</p>
                     <div style={{textAlign:'center'}}>
                         {choixOrdi}
                     </div>
