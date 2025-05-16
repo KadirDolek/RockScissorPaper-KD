@@ -37,19 +37,22 @@ function App() {
     setShowBagarre(prev=> !prev)
     setShowContent(open=> !open)
   }
-  const toggleRules = () => {
-    setShowRules(prev => !prev);
+  const Rules = () => {
+    setShowRules(true);
   };
+  const Close = ()=>{
+    setShowRules(false)
+  }
 
   return (
     <>
       <Header point={point}/>
       {showContent && <Content onMakeChoice={handleGameChoice}/>}
       {showBagarre && <Bagarre handleRestart={handleRestart} point={point} monChoix={monChoix} choixOrdi={choixOrdi}/>}
-      <h4 id='titrerules1' onClick={toggleRules}>
+      <h4 id='titrerules1' onClick={Rules}>
         RULES
       </h4>
-      {showRules && <ShowRules onClose={toggleRules} />}
+      {showRules && <ShowRules onClose={Close}/>}
     </>
   )
 }

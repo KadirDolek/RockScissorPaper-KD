@@ -1,12 +1,13 @@
 import './ShowRules.css'
 
-export default function ShowRules() {
+export default function ShowRules({ onClose }) {
     return (
-        <div id='layout'>
+        <div id='layout' onClick={onClose}>
             <div id='showrules'>
                 <div id='container-titre'>
                     <h4 id='titrerules'>RULES</h4>
                     <img
+                        onClick={onClose}
                         id='closebtn'
                         src="../src/assets/images/icon-close.svg"
                         alt="close"
