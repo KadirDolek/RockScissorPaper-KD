@@ -76,7 +76,7 @@
     animation: scaleZoom 1s infinite;
     z-index: -1;
 } */
-
+/* 
 @keyframes scaleZoom {
 
     from{
@@ -93,4 +93,4 @@
     to{
         scale: 1.3;
     }
-}
+} */

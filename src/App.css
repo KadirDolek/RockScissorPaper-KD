@@ -37,19 +37,21 @@ body{
     margin-left: 10%;
   }
 }
+
+
 @media (max-width:420px){
   
   #titrerules1{
     display: flex;
     justify-self: start;
-    transform: translateX(220px) translateY(100px);
+    transform: translateX(260px) translateY(100px);
   }
 
 }
-@media (min-width:421px) and (max-width:550px){
+@media (max-width:550px){
 
   body{
-    margin-left: 0%;
+    margin-left: 70%;
   }
   #titrerules1{
     display: flex;
