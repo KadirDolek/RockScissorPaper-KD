@@ -31,12 +31,7 @@ body{
    justify-self: end;
 }
 
-@media (max-width:710px){
 
-  body{
-    margin-left: 10%;
-  }
-}
 
 
 @media (max-width:420px){
@@ -51,12 +46,15 @@ body{
 @media (max-width:550px){
 
   body{
-    margin-left: 70%;
+    margin-left: 75%;
   }
+  .np{
+    margin-left: -150%;
+}
   #titrerules1{
     display: flex;
     justify-self: start;
-    transform: translateX(200px) translateY(100px);
+    transform: translateX(180px) translateY(100px);
   }
 
 }

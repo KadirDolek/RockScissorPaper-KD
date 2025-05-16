@@ -26,8 +26,8 @@ export default function Bagarre({monChoix, choixOrdi, handleRestart }){
 
     return(
         <>
-            <div style={{display:'flex', justifyContent:'space-evenly', marginTop:'7.5%'}}>
-                <div>
+            <div className='np' style={{display:'flex', justifyContent:'space-evenly', marginTop:'7.5%'}}>
+                <div >
                     <p id='oui' style={{textAlign:'center'}}>YOU PICKED</p>
                     <div  style={{textAlign:'center'}}>
                         {monChoix}
